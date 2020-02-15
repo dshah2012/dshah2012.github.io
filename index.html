@@ -30,7 +30,8 @@
 		e.type="text/javascript",
 		e.async=true,
 		e.src="//staticw2.yotpo.com/gDQvHF3Laib2Z0DgZzElhE1sxEla7jKV1TB8thfb/widget.js";
-		var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
+		var t=document.getElementsByTagName("script")[0];
+		t.parentNode.insertBefore(e,t)})();
 		
 		
 	async function getAPIToken(){
@@ -49,7 +50,7 @@
 		    	},
 		    	body : JSON.stringify(data),
 		};
-		response = await fetch(https://api.yotpo.com/oauth/token,options);
+		response = await fetch('https://api.yotpo.com/oauth/token',options);
 		res = await response.json();
 		
 		console.log(res);
@@ -58,7 +59,7 @@
    </script>
 </head>
 
-<body id="page-top" onload="getAPIToken()">
+<body id="page-top" onload="getAPIToken();">
 
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="sideNav" style="background-color:currentColor;" >
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
