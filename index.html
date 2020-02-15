@@ -40,7 +40,7 @@
 		"client_secret": "0A0BaWOP8CnOchuJjwU6XVy3WSgLd3pCHNMz1JIH",
 		"grant_type": "client_credentials"
 		
-		}
+		};
 		const options = {
 
 		    	method : 'POST',
@@ -48,7 +48,7 @@
 		    		"Content-type" : "application/json"
 		    	},
 		    	body : JSON.stringify(data),
-		}
+		};
 		response = await fetch(https://api.yotpo.com/oauth/token,options);
 		res = await response.json();
 		
