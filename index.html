@@ -22,9 +22,43 @@
   <link href="css/resume.min.css" rel="stylesheet">
   <link href="css/custom_style.css" rel="stylesheet">
 	
+	
+  <script type="text/javascript">
+	var res;
+	(function e(){
+		var e=document.createElement("script");
+		e.type="text/javascript",
+		e.async=true,
+		e.src="//staticw2.yotpo.com/gDQvHF3Laib2Z0DgZzElhE1sxEla7jKV1TB8thfb/widget.js";
+		var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
+		
+		
+	async function getAPIToken(){
+		
+		data ={
+		"client_id": "gDQvHF3Laib2Z0DgZzElhE1sxEla7jKV1TB8thfb",
+		"client_secret": "0A0BaWOP8CnOchuJjwU6XVy3WSgLd3pCHNMz1JIH",
+		"grant_type": "client_credentials"
+		
+		}
+		const options = {
+
+		    	method : 'POST',
+		    	headers : {
+		    		"Content-type" : "application/json"
+		    	},
+		    	body : JSON.stringify(data),
+		}
+		response = await fetch(https://api.yotpo.com/oauth/token,options);
+		res = await response.json();
+		
+		console.log(res);
+		
+	}
+   </script>
 </head>
 
-<body id="page-top">
+<body id="page-top" onload="getAPIToken()">
 
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="sideNav" style="background-color:currentColor;" >
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
@@ -418,7 +452,14 @@
     </section>
 
   </div>
-
+  <div class="yotpo yotpo-main-widget"
+		data-product-id="SKU/Product_ID"
+		data-price="Product Price"
+		data-currency="Price Currency"
+		data-name="Product Title"
+		data-url="The urlof your product page"
+		data-image-url="The product image url">
+  </div>
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
