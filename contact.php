@@ -1,5 +1,0 @@
-<?
-
-echo "PHP is running"; 
-
-?>
